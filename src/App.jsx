@@ -9,10 +9,10 @@ import './App.css'
 function App() {
 
   return (
-    <>
+    <div className='App'>
      <h1>Raleway</h1>
      <Welcome/>
-    </>
+    </div>
   )
 }
 
