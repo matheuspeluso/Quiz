@@ -4,13 +4,13 @@ import "./Welcome.css";
 import QuizImg from "../../img/quiz.svg";
 
 const Welcome = () => {
-  const quisState = useContext(QuizContext);
-  console.log(quisState)
+  const [quisState,dispatch] = useContext(QuizContext); // quisState pega os valores e o dispatch altera os valores
+  
   return (
     <div id="welcome">
       <h2>Seja Bem-vindo!</h2>
       <p>Clique no botão abaixo para começar:</p>
-      <button>Iniciar</button>
+      <button onClick={()=> dispatch({type:"CHANGE_STATE"})}>Iniciar</button>
       <img src={QuizImg} alt="Inicio do Quiz"/>
     </div>
   )
