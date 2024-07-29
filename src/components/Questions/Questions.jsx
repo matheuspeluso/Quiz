@@ -2,10 +2,17 @@ import { useContext } from 'react'
 import { QuizContext } from '../../context/quiz';
 
 const Questions = () => {
-    const [quisState,dispatch] = useContext(QuizContext);
+    const [quizState,dispatch] = useContext(QuizContext);
+    //pegando a pegunta atual
+    const currentQuestion = quizState.questions[quizState.currentQuestion]
   return (
-    <div>
-      Questions
+    <div id='questions'>
+        <p>Pergunta {quizState.currentQuestion + 1} de {quizState.questions.length}</p>
+        <h2>{currentQuestion.question}</h2>
+        <div id="options-container">
+            <p>Opções</p>
+        </div>
+        <button>Continuar</button>
     </div>
   )
 }

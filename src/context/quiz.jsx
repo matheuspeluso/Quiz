@@ -5,7 +5,8 @@ const STAGES = ["Start", "Playing", "End"]
 
 const initialsState = { // estagio inicial do reducer
     gameStage: STAGES[0],
-    questions
+    questions,
+    currentQuestion: 0,
 }
 
 const quisReducer = (state, action) => {
@@ -17,7 +18,18 @@ const quisReducer = (state, action) => {
             return {
                 ...state, // pega o state anterior completo e depois substitui apena o gameState
                 gameStage: STAGES[1],
-            }
+            };
+            
+        case "REORDER_QUESTIONS":
+            const reorderedQuestions = questions.sort(() => {
+                return Math.random() - 0.5;
+            });
+
+            return {
+                ...state,
+                questions: reorderedQuestions,
+            };
+
         default:
             return state
     }
