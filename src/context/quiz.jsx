@@ -14,7 +14,10 @@ const quisReducer = (state, action) => {
     switch(action.type){ 
         case "CHANGE_STATE":
             console.log("caiu em CHANGE_STATE!")
-            return state
+            return {
+                ...state, // pega o state anterior completo e depois substitui apena o gameState
+                gameStage: STAGES[1],
+            }
         default:
             return state
     }
