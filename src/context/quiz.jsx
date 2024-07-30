@@ -7,6 +7,7 @@ const initialsState = { // estagio inicial do reducer
     gameStage: STAGES[0],
     questions,
     currentQuestion: 0,
+    score : 0
 }
 
 const quisReducer = (state, action) => {
@@ -43,6 +44,8 @@ const quisReducer = (state, action) => {
                 currentQuestion: nextQuestion,
                 gameStage : endGame ? STAGES[2] : state.gameStage,
             };
+        case "NEW_GAME":
+            return initialsState
 
         default:
             return state
