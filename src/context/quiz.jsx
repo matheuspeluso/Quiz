@@ -1,7 +1,7 @@
 import { createContext, useReducer} from "react"; // importando o context e useReducer que permite gerenciar estados complexos e fazer alterações com base no projeto
-import questions from "../data/questions"; // perguntas
+import questions from "../data/questions_complete"; // perguntas
 
-const STAGES = ["Start", "Playing", "End"]
+const STAGES = ["Start","Category", "Playing", "End"]
 
 const initialsState = { // estagio inicial do reducer
     gameStage: STAGES[0],

@@ -6,6 +6,7 @@ import { QuizContext } from './context/quiz'
 import Welcome from './components/Welcome/Welcome'
 import Questions from './components/Questions/Questions'
 import GameOver from './components/GameOver/GameOver'
+import PickCategory from './components/PickCategory/PickCategory'
 
 //static
 import './App.css'
@@ -21,8 +22,9 @@ function App() {
 
   return (
     <div className='App'>
-     <h1>Raleway</h1>
+     <h1>Quiz de Programação!</h1>
      {quisState.gameStage === "Start" && <Welcome/>}
+     {quisState.gameStage === "Category" && <PickCategory/>}
      {quisState.gameStage === "Playing" && <Questions/>}
      {quisState.gameStage === "End" && <GameOver/>}
     </div>
