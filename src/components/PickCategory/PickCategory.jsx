@@ -11,7 +11,9 @@ const PickCategory = () => {
     <div id="category">
         <h2>Escolha uma categoria!</h2>
         <p>As perguntas serão referente a uma das linguagens abaixo:</p>
-        <button>CSS</button>
+        <div>
+            <button>CSS</button>
+        </div>
         <img src={Category} alt="Categorias do Quiz" />
     </div>
   )
