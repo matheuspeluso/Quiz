@@ -19,12 +19,29 @@ const quisReducer = (state, action) => {
                 ...state, // pega o state anterior completo e depois substitui apena o gameState
                 gameStage: STAGES[1],
             };
-            
+        case "START_GAME":
+            let quizQuestions = null;
+          
+            state.questions.forEach((question) => {
+                console.log("entrou no forearch")
+                if (question.category === action.payload) {
+                    quizQuestions = question.questions;
+                    console.log(quizQuestions)
+                }
+            });
+          
+            return {
+                ...state,
+                questions: quizQuestions,
+                gameStage: STAGES[2],
+            };
+
+
         case "REORDER_QUESTIONS":
-            const reorderedQuestions = questions.sort(() => {
+            const reorderedQuestions = state.questions.sort(() => {
                 return Math.random() - 0.5;
             });
-
+          
             return {
                 ...state,
                 questions: reorderedQuestions,
@@ -41,7 +58,7 @@ const quisReducer = (state, action) => {
             return{
                 ...state,
                 currentQuestion: nextQuestion,
-                gameStage : endGame ? STAGES[2] : state.gameStage,
+                gameStage : endGame ? STAGES[3] : state.gameStage,
                 answerSelected: false,
             };
 
