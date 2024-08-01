@@ -10,6 +10,7 @@ const initialsState = { // estagio inicial do reducer
     score : 0, 
     answerSelected : false,
     help: false,
+    optionToHide:null,
 }
 
 const quisReducer = (state, action) => {
@@ -87,6 +88,26 @@ const quisReducer = (state, action) => {
                 ...state,
                 help: "tip"
             }
+        
+        case "REMOVE_OPTION":
+            const questionWithoutOption = state.questions[state.currentQuestion] //acessando a pergunta atual
+            let repeat = true
+            let optionToHide
+
+            questionWithoutOption.options.forEach((option) =>{
+                if(option !== questionWithoutOption.answer && repeat){
+                    optionToHide = option;
+                    repeat = false;
+                }
+            })
+
+            return{
+                ...state,
+                optionToHide,
+                help:true,
+            }
+
+
 
         default:
             return state

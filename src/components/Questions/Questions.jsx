@@ -31,6 +31,7 @@ const Questions = () => {
               key={option} 
               answer={currentQuestion.answer}
               selectOption = {() => onSelectOptions(option)} // função sendo enviada como props para ser ativa na options
+              hide={quizState.optionToHide === option ? "hide" : null}
               />
             ))}
         </div>
@@ -40,6 +41,7 @@ const Questions = () => {
             {currentQuestion.tip && (
               <button onClick={() => dispatch({type:"SHOW_TIP"})}>Dica</button>
             )}
+            <button onClick={() => dispatch({type: "REMOVE_OPTION"})}>Excluir uma Opção</button>
           </>
         )}
 
