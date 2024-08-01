@@ -7,6 +7,9 @@
 
 **QUIZ DE PROGRAMAÇÃO** é um projeto que foi desenvolvido no curso de React da comunidade hora de codar , neste projeto utilizamos ReactJS utilizando Hooks como : useReducer , useEffect e context api.
 
+## 💻Veja o projeto Online
+[ACESSE O DEPLOY CLICANDO AQUI!](https://quiz-nine-opal.vercel.app/)
+
 ## 🏜️ Fotos do projeto
 <div align="center">
     <img src="./src/img/redmeIMG/Homepage.png" width="300px">
