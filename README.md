@@ -1,8 +1,43 @@
-# React + Vite
+<h1 align="center">
+    <img src="./src/img/quiz.svg" width="200px">
+    <br>
+</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📚Sobre
 
-Currently, two official plugins are available:
+**QUIZ DE PROGRAMAÇÃO** é um projeto que foi desenvolvido no curso de React da comunidade hora de codar , neste projeto utilizamos ReactJS utilizando Hooks como : useReducer , useEffect e context api.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🏜️ Fotos do projeto
+<div align="center">
+    <img src="./src/img/redmeIMG/Homepage.png" width="300px">
+    <img src="./src/img/redmeIMG/Categorypage.png" width="300px">
+    <img src="./src/img/redmeIMG/Questionspage.png" width="300px">
+</div>
+
+
+## 🔨Ferramentas
+
+- React.JS
+-- CSS
+
+
+## Como executar o projeto
+```bash
+    # clone o projeto
+    git clone https://github.com/matheuspeluso/Quiz.git
+
+    #entrar na pasta do projeto
+    cd Quiz
+
+    #instalação das dependencias usando npm 
+    npm install 
+
+    #para executar o sistema 
+    npm run dev
+    
+```
+## Autor do projeto
+<p>Matheus Pereira Peluso do Nascimento</p>
+<p>Email para contato: matheuspeluso17@gmail.com</p>
+<p>Telefone para contato: +55 (21)99385-7520</p>
+
