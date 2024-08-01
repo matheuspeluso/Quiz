@@ -9,6 +9,7 @@ const initialsState = { // estagio inicial do reducer
     currentQuestion: 0,
     score : 0, 
     answerSelected : false,
+    help: false,
 }
 
 const quisReducer = (state, action) => {
@@ -51,7 +52,7 @@ const quisReducer = (state, action) => {
             const nextQuestion = state.currentQuestion + 1;
             let endGame = false
 
-            if (!questions[nextQuestion]){
+            if (!state.questions[nextQuestion]){
                 endGame = true
             }
 
@@ -60,6 +61,7 @@ const quisReducer = (state, action) => {
                 currentQuestion: nextQuestion,
                 gameStage : endGame ? STAGES[3] : state.gameStage,
                 answerSelected: false,
+                help:false,
             };
 
         case "NEW_GAME":
@@ -78,6 +80,12 @@ const quisReducer = (state, action) => {
                 ...state,
                 score: state.score + correctAnswer,
                 answerSelected:option,
+            }
+
+        case "SHOW_TIP":
+            return{
+                ...state,
+                help: "tip"
             }
 
         default:
